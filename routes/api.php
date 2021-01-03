@@ -21,6 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('me', function () {
     // Let's return fake information.
     return [
-        'name' => 'John Doe',
+        'name' => 'Mahmud Jion',
     ];
 });
