@@ -22,5 +22,6 @@ Route::get('me', function () {
     // Let's return fake information.
     return [
         'name' => 'Mahmud Jion',
+        'description' => 'nuxt js'
     ];
 });
