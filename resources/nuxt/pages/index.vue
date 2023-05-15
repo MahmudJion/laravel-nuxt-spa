@@ -7,9 +7,18 @@
 
   <script>
   export default {
-    async asyncData({ $axios }) {
-      const { data: user } = await $axios.get('api/me');
-      return { user };
+    data() {
+      return {
+        user: null
+      };
     },
+    async created() {
+      try {
+        const response = await this.$axios.get('api/me');
+        this.user = response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    }
   };
   </script>
